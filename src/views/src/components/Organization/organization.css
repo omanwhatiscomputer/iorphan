@@ -1,0 +1,39 @@
+.toggler{
+    float: right;
+    margin-bottom: 20px;
+}
+.toggler-label{
+    margin-right: 10px;
+}
+
+.toggler-menu{
+    color: rgb(193, 214, 255);
+    text-align: center;
+    border-radius: 25px;
+    width: 125px;
+    height: 30px;
+    background-color: rgb(2, 69, 252);
+    cursor: pointer;
+    transition: 0.1s;
+}
+
+.toggler-menu:focus{
+    outline:  solid;
+    background-color: rgb(57, 110, 255);
+    transition: 0.1s;
+}
+
+.toggler-menu:hover{
+    background-color: rgb(57, 110, 255);
+    transition: 0.1s;
+}
+
+.thead-dark{
+    background-color: #212529;
+    color: whitesmoke;
+}
+.table-container{
+    overflow: hidden;
+    width: 100%;
+    border-radius:  10px;
+}

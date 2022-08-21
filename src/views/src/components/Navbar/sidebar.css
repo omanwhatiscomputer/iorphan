@@ -1,0 +1,11 @@
+:root{
+    --accent-color: rgb(255, 251, 0);
+}
+.sidebar{
+    color: var(--accent-color);
+    list-style: none;
+}
+.sidebar-parent{
+    padding-top: 65px;
+    border: 3px red;
+}

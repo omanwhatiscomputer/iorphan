@@ -1,0 +1,60 @@
+.HamburgerMenu {
+    border-radius: 5px ;
+    color: #FFFFFF;
+    background-color: #212529;
+    border: 0;
+    height: 40px;
+    width: 40px;
+    margin: 0 4px 0 4px;
+}
+.HamburgerMenu:hover {
+    color: red;
+}
+
+.navbar-brand {
+    margin-right: 50%;
+    transition: 0.15s;
+    font-weight: bolder;
+    color: #1AAFF0;
+
+    background: linear-gradient(to bottom right, #15AEE6 35%, #FFFF1C 59%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.dropdown-menu{
+    background-color: #212529;
+    right: 1px;
+    top: 47px;
+    min-width: 100px;
+    border-radius: 0px 0px 5px 5px;
+
+    display: block;
+}
+.dropdown-item{
+    color: #AFB4B3;
+    text-align: center;
+}
+.dropdown-item:hover {
+    background-color: red;
+}
+.dropdown-item:focus {
+    background-color:  red;
+    color: #AFB4B3;
+}
+.dropdown-divider{
+    background-color: #AFB4B3;
+}
+.dropdown{
+    cursor: pointer;
+}
+
+
+
+@media screen and (min-width: 768px) {
+    .navbar-brand {
+        margin-right: 15px;
+        transition: 0.5s;
+    }
+}
