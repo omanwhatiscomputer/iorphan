@@ -35,7 +35,7 @@ const chai = require('chai');
 const should = chai.should();
 const chaiHttp = require('chai-http');
 const { Organization } = require('../../models/organizationModel');
-const { before, describe } = require('mocha');
+const { before, describe, it } = require('mocha');
 
 
 chai.use(chaiHttp);
