@@ -1,4 +1,4 @@
-# MERN stack project `Orphanage Management System`
+# MERN stack `Orphanage Management System`
 
 **A part of CSE470 final project**
 
@@ -29,7 +29,8 @@ It correctly bundles React in production mode and optimizes the build for the be
 
 ## Documentation
 
-#### blogPostController: `./src/controller/blogPostController`:
+#### blogPostController:
+Path: `./src/controller/blogPostController`:
 
 ```
 function: validateBlogPost 
@@ -77,4 +78,55 @@ middleware: getCurrentBlogPost
     body parameters: _id  ~ JSON
 @headers: JWT
 @return: BlogPost objects ~ JSON
+```
+
+#### organizationController: 
+Path: `./src/controller/organizationController`:
+
+```
+function: validateOrganization 
+@params: organization ~ JSON
+```
+
+```
+middleware: createOrganization 
+@HTTP method: POST
+@params: 
+    body parameters: Organization Object ~ JSON
+@return: Organization object ~ JSON
+```
+
+```
+middleware: getAllOrganizations
+@HTTP method: GET
+@params: none
+@headers: JWT
+@return: Array of Organization objects ~ JSON array
+```
+
+```
+middleware: updateOrganization
+@HTTP method: PUT
+@params: 
+    body parameters: _id  ~ JSON
+@headers: JWT
+@return: Organization object ~ JSON
+```
+
+```
+middleware: deleteCurrentOrganization
+@HTTP method: DELETE
+@params: 
+    body parameters: _id  ~ JSON
+@headers: JWT
+@return: Organization object ~ JSON
+```
+
+```
+middleware: getCurrentOrganization
+@HTTP method: GET
+@params: 
+    body parameters: _id  ~ JSON
+@headers: JWT
+@return: Organization objects ~ JSON
 ```
