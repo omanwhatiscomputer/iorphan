@@ -30,7 +30,7 @@
   },
   "scripts": {
     "start": "node ./src/server.js",
-    "test": "mocha --recursive **/runner.js"
+    "test": "mocha --recursive ./src/tests/**/runner.js"
   },
   "eslintConfig": {
     "extends": [
