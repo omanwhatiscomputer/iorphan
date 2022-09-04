@@ -35,6 +35,7 @@ Path: `./src/controller/blogPostController`:
 ```
 function: validateBlogPost 
 @params: blogpost ~ JSON
+@return: errors ~ JSON
 ```
 
 ```
@@ -86,6 +87,7 @@ Path: `./src/controller/organizationController`:
 ```
 function: validateOrganization 
 @params: organization ~ JSON
+@return: errors ~ JSON
 ```
 
 ```
