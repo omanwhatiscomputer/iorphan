@@ -70,3 +70,4 @@ app.use('/api/volunteeringEvents', volunteeringEvents);
  * 
  */
 
+ module.exports = app;

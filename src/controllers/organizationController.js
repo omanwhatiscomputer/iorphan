@@ -44,7 +44,7 @@ const createOrganization = async (req, res) => {
     organization = new Organization(_.pick(req.body, properties));
     await organization.save();
 
-    res.status(200).send("Success");
+    res.status(200).send(organization);
 };
 
 
@@ -83,7 +83,6 @@ const updateOrganization = async (req, res) => {
  * @returns operation status
  */
 const deleteCurrentOrganization = async (req, res) => {
-    console.log("DELETE", req.body._id);
     const organization = await Organization.findByIdAndDelete( req.body._id );
 
     if (!organization) return res.status(404).send('The organization with the given ID was not found.');
