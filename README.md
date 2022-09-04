@@ -32,6 +32,12 @@ It correctly bundles React in production mode and optimizes the build for the be
 #### blogPostController: `./src/controller/blogPostController`:
 
 ```
-middleware: validateBlogPost 
-@params: `blogpost` => JSON Object
+function: validateBlogPost 
+@params: blogpost ~ JSON Object
+```
+
+```
+middleware: createBlogPost 
+@HTTP method: POST
+@params: body parameters ~ JSON
 ```
