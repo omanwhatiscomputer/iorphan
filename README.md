@@ -33,11 +33,48 @@ It correctly bundles React in production mode and optimizes the build for the be
 
 ```
 function: validateBlogPost 
-@params: blogpost ~ JSON Object
+@params: blogpost ~ JSON
 ```
 
 ```
 middleware: createBlogPost 
 @HTTP method: POST
-@params: body parameters ~ JSON
+@params: 
+    body parameters: BlogPost Object ~ JSON
+@return: BlogPost object ~ JSON
+```
+
+```
+middleware: getAllBlogPosts
+@HTTP method: GET
+@params: none
+@headers: JWT
+@return: Array of BlogPost objects ~ JSON array
+```
+
+```
+middleware: updateBlogPost
+@HTTP method: PUT
+@params: 
+    body parameters: _id  ~ JSON
+@headers: JWT
+@return: BlogPost object ~ JSON
+```
+
+```
+middleware: deleteCurrentBlogPost
+@HTTP method: DELETE
+@params: 
+    body parameters: _id  ~ JSON
+@headers: JWT
+@return: BlogPost object ~ JSON
+```
+
+```
+middleware: getCurrentBlogPost
+@HTTP method: GET
+@params: 
+    body parameters: _id  ~ JSON
+@headers: JWT
+@return: BlogPost objects ~ JSON
 ```
