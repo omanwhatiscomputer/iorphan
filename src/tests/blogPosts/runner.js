@@ -151,4 +151,6 @@ describe("Blog Posts api", () => {
 
   
 
-
+ /**
+  * Add negative cases
+  */

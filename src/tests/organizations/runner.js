@@ -21,6 +21,7 @@
  */
 
 
+
  process.env.NODE_ENV = 'test';
 
 
@@ -181,6 +182,8 @@ describe("Organization api", () => {
 });
  
    
- 
+ /**
+  * Add negative cases
+  */
  
  
