@@ -20,14 +20,17 @@ const createBlogPost = async (req, res) => {
     const { error } = validateBlogPost(req.body); 
     if(error) return res.status(400).send(error.details[0].message);
 
-    if(req.body.photo){
+    if(req.body.photo && req.body.author){
+        req.body.author = mongoose.Types.ObjectId(req.body.author);
         req.body.photo = mongoose.Types.ObjectId(req.body.photo);
     }
 
     const properties = ["author", "title", "subHeading", "body", "photo"];
+
     
     const blogPost = new BlogPost(_.pick(req.body, properties));
     await blogPost.save();
+    
 
     res.status(200).send(blogPost);
 };

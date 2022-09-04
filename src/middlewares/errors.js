@@ -20,6 +20,8 @@ const errors = ((error, req, res, next) => {
               message: "File must be of appropriate type",
             });
           }
+    }else{
+      return res.status(400).send("Bad Request");
     }
 })
 

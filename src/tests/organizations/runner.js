@@ -178,6 +178,64 @@ describe("Organization api", () => {
        });
  
      });
+
+     describe("Get Current Organization with invalid ID", () => {
+      it("should get a 404 not found error", (done) => {
+        let body = {
+          '_id': _id
+        }
+        chai.request(server)
+          .get('/api/organizations/')
+          .send(body)
+          .end((err, res) => {
+            res.should.have.status(404);
+            done();
+          });
+      });
+
+    });
+
+    describe("Create Organization with invalid input", () => {
+      it("should return 400 bad request error", (done) => {
+
+        let body = {
+           "name": "Dummys",
+           "location": {
+               "latitude": 546554,
+               "longitude": 7977487,
+           },
+           "address": {
+               "addressLine1": "dsa asdsaddg sd",
+               "addressLine2": "sdfcsdf dsf ds fs", 
+               "city": "ddsad ", 
+               "state": "esds ", 
+               "zipCode": "45534", 
+               "country": "ygygf",
+           },
+           "description": "dsasda asd sad sad sad asd asd adas",
+           "logo": "addsd",
+           "contacts": {
+               "email": "sd.adsa@dsf.",
+               "phoneNumber_1": "5465454",
+               "phoneNumber_2": "545564",
+               "website": "sdsa.dsa.dsa",
+           },
+           "bankAccountNo": "6EEF654",
+        };
+
+        
+        
+        chai.request(server)
+          .post('/api/organizations/')
+          .send(body)
+          .end((err, res) => {
+            res.should.have.status(400);
+            _id = res.body._id;
+            done();
+          });
+      });
+
+   });
  
 });
  

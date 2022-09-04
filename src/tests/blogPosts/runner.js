@@ -37,7 +37,6 @@ const { BlogPost } = require('../../models/blogPostModel');
 const { before, describe } = require('mocha');
 
 
-console.log(BlogPost);
 
 
 chai.use(chaiHttp);
@@ -141,6 +140,46 @@ describe("Blog Posts api", () => {
           .send(body)
           .end((err, res) => {
             res.should.have.status(200);
+            done();
+          });
+      });
+
+    });
+
+    describe("Get Current Post with invalid ID", () => {
+      it("should get a 404 not found error", (done) => {
+        let body = {
+          '_id': _id
+        }
+        chai.request(server)
+          .get('/api/blogPosts/')
+          .send(body)
+          .end((err, res) => {
+            res.should.have.status(404);
+            done();
+          });
+      });
+
+    });
+
+    describe("Create Post with invalid input", () => {
+      it("should get a 400 bad request error", (done) => {
+
+        let body = {
+          'title': 'dummy-test',
+          'author': new mongoose.Types.ObjectId(),
+          'subHeading': 'sfsfsdsd fsdfds fds',
+          'photo' : new mongoose.Types.ObjectId(),
+        };
+
+        
+        
+        chai.request(server)
+          .post('/api/blogPosts/')
+          .send(body)
+          .end((err, res) => {
+            res.should.have.status(400);
+            _id = res.body._id;
             done();
           });
       });

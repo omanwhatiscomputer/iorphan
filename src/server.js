@@ -19,6 +19,7 @@ const imgUploads = require('./routes/imgUploadRoutes');
 const users = require('./routes/userRoutes');
 
 
+
 // intialization
 const app = express();
 
@@ -48,6 +49,7 @@ app.use(cors({exposedHeaders: 'x-auth-token, x-user-type'}));
 
 // middlewares
 app.use(express.json());
+
 
 // middlewares - api endpoints
 app.use('/api/users', users);
