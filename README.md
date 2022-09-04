@@ -102,7 +102,6 @@ middleware: createOrganization
 middleware: getAllOrganizations
 @HTTP method: GET
 @params: none
-@headers: JWT
 @return: Array of Organization objects ~ JSON array
 ```
 
