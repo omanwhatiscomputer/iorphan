@@ -1,4 +1,6 @@
-# MERN stack project `Orphanage Management System` as part of CSE470 final project:
+# MERN stack project `Orphanage Management System`
+
+**A part of CSE470 final project**
 
 ## Progress so far:
 - full fledged implementation of the backend
